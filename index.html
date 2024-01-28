@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Escalonador</title>
+</head>
+    <h1>Escalonador Round-Robin</h1>
+    
+    <div class="inputs">
+        <h2>Dados para execução do escalonador</h2>
+        <label for="quantum">Quantum:</label><br>
+        <input type="number" id="quantum"><br>
+        <label for="ppm">Processos por minuto:</label><br>
+        <input type="number" id="ppm"><br>
+        <label for="lifeTime">Tempo de vida do processo(ms):</label><br>
+        <input type="number" id="lifeTime"><br>
+        <label for="ioChance">Chance de processo I/O(%):</label><br>
+        <input type="number" id="ioChance"><br>
+        <label for="waitTimeIO">tempo de espera I/O(ms)</label><br>
+        <input type="number" id="waitTimeIO"><br>
+        <button id="btnExecutar">executar</button>
+    </div>
+        
+    <div class="results">
+        <h2>Resultados do Simulador</h2>
+        <label for="simulatorStatus">Estado do Simulador</label><br>
+        <input type="text" id="simulatorStatus" value="Parado" disabled><br>
+        <label for="cycles">Ciclos Realizados</label><br>
+        <input type="text" id="cycles" value="0" disabled><br>
+        <label for="createdProcces">Processos Criados</label><br>
+        <input type="text" id="createdProcces" value="0" disabled><br>
+        <label for="completedProcess">Processos Concluidos</label><br>
+        <input type="text" id="completedProcess" value="0" disabled><br>
+        <label for="IoProcess">Processos I/O Gerados</label><br>
+        <input type="text" disabled id="IoProcess" value="0">
+    </div>
+    
+    <div class="process">
+        <table class="tabela">    
+            <tr>
+                <th>Id processo</th>
+                <th>Tempo de Vida</th>
+                <th>Em processamento</th>
+                <th>Tempo espera restante(ms)</th>
+                <th>Status</th>
+            </tr>
+            <tbody id="processTable">
+                <tr>
+                    <td>Sem processo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/escalonador.js"></script>
+<body>
+
+</body>
+
+</html>

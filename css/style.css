@@ -1,0 +1,17 @@
+body {
+    background-color: grey;
+}
+
+table, th, tr,td {
+    border: 1px black solid;
+}
+
+.results {
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px sol;
+}
+
+.inputs {
+    padding: 4px;
+}
